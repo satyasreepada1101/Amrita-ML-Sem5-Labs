@@ -1,3 +1,5 @@
+# testing part for A2 ques using AI codes
+
 import unittest
 
 from A1_05 import minkowski_distance

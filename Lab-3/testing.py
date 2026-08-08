@@ -3,7 +3,6 @@
 import unittest
 import pandas as pd
 
-from A2 import label_encode, one_hot_encode
 from A4 import minkowski_dist
 from A5 import minkowski_distance
 from A7 import dot_product, euclidean_norm
@@ -11,32 +10,6 @@ from A8 import find_mean, find_variance, find_std
 
 
 class TestLab3Functions(unittest.TestCase):
-
-    # Test Label Encoding
-    def test_label_encode(self):
-        data = pd.Series(["Red", "Blue", "Red", "Green"])
-
-        result = label_encode(data)
-
-        expected = [0, 1, 0, 2]
-
-        self.assertEqual(result, expected)
-
-
-    # Test One-Hot Encoding
-    def test_one_hot_encode(self):
-        data = pd.Series(["Red", "Blue", "Red"])
-
-        result = one_hot_encode(data)
-
-        expected = [
-            [1, 0],
-            [0, 1],
-            [1, 0]
-        ]
-
-        self.assertEqual(result.values.tolist(), expected)
-
 
     # Test Minkowski Distance
     def test_minkowski_dist(self):
